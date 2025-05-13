@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 햄버거 버튼 오른쪽 상단에 위치 */
+.menu-btn {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px; /* 오른쪽 상단에 배치 */
+  z-index: 1001;
+}
+
+/* 사이드바 기본 상태: 숨김 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* 사이드바는 왼쪽에서 슬라이드로 나옴 */
+  width: 220px;
+  height: 100vh;
+  background-color: #0e4d92;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 콘텐츠 */
+.content {
+  padding: 20px;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+/* 사이드바가 열릴 때 */
+.sidebar.open {
+  left: 0;
+}
